@@ -14,7 +14,7 @@ const getProducts = asyncHandler(async (req, res) => {
 
 // @desc Get One Product
 // @route GET /api/products
-// @access Private
+
 const getProduct = asyncHandler(async (req, res) => {
   const myregexp = /^[a-f\d]{24}$/i;
 
@@ -32,7 +32,7 @@ const getProduct = asyncHandler(async (req, res) => {
 
 // @desc Add Products
 // @route POST /api/products
-// @access Private
+
 const addProduct = asyncHandler(async (req, res) => {
   const body = req.body;
   if (!body.name || !body.price || !body.description || !body.category) {
@@ -55,7 +55,6 @@ const addProduct = asyncHandler(async (req, res) => {
 
 // @desc Update Product
 // @route PUT /api/products/:id
-// @access Private
 const updateProduct = asyncHandler(async (req, res) => {
   const myregexp = /^[a-f\d]{24}$/i;
 
@@ -86,7 +85,6 @@ const updateProduct = asyncHandler(async (req, res) => {
 
 // @desc Delete Product
 // @route DELETE /api/products/:id
-// @access Private
 const deleteProduct = asyncHandler(async (req, res) => {
   const myregexp = /^[a-f\d]{24}$/i;
 
